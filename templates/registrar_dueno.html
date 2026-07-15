@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrar Dueño</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<header>
+    <h1> Registrar Dueño </h1>
+</header>
+
+<div class="container">
+
+<form method="POST">
+
+<label>Nombre</label><br>
+<input type="text" name="nombre"><br><br>
+
+<label>Teléfono</label><br>
+<input type="text" name="telefono"><br><br>
+
+<label>Dirección</label><br>
+<input type="text" name="direccion"><br><br>
+
+<button type="submit">Guardar</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
+
+<br>
+
+<a href="/">Volver al Inicio</a>

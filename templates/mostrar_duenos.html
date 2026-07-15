@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Mostrar Dueños</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<header>
+    <h1>Lista de Dueños</h1>
+</header>
+
+<div class="container">
+
+<h2>Lista de Dueños</h2>
+
+<table border="1">
+
+<tr>
+    <th>ID</th>
+    <th>Nombre</th>
+    <th>Teléfono</th>
+    <th>Dirección</th>
+</tr>
+
+{% for dueno in duenos %}
+
+<tr>
+
+<td>{{ dueno[0] }}</td>
+<td>{{ dueno[1] }}</td>
+<td>{{ dueno[2] }}</td>
+<td>{{ dueno[3] }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+<br>
+
+
+<a href="/">Volver al Inicio</a>
+
+</div>
+
+</body>
+
+</html>

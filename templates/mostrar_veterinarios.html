@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Mostrar Veterinarios</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<header>
+    <h1>Lista de Veterinaros</h1>
+</header>
+
+<div class="container">
+
+<h2>Lista de Veterinarios</h2>
+
+<table border="1">
+
+<tr>
+    <th>ID</th>
+    <th>Nombre</th>
+    <th>Especialidad</th>
+  
+</tr>
+
+{% for veterinario in veterinarios %}
+
+<tr>
+
+<td>{{ veterinario[0] }}</td>
+<td>{{ veterinario[1] }}</td>
+<td>{{ veterinario[2] }}</td>
+<td>{{ veterinario[3] }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+<br>
+
+<a href="/">Volver al Inicio</a>
+
+</div>
+
+</body>
+
+</html>

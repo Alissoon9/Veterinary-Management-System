@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrar Cita</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<header>
+    <h1> Registrar Cita</h1>
+</header>
+
+<div class="container">
+
+<form method="POST">
+
+<label>Fecha</label><br>
+<input type="date" name="fecha"><br><br>
+
+<label>Hora</label><br>
+<input type="time" name="hora"><br><br>
+
+<label>Motivo</label><br>
+<input type="text" name="motivo"><br><br>
+
+<label>Mascota</label><br>
+
+<select name="id_mascota">
+
+{% for mascota in mascotas %}
+
+<option value="{{ mascota[0] }}">
+    {{ mascota[1] }}
+</option>
+
+{% endfor %}
+
+</select>
+
+<br><br>
+
+<label>Veterinario</label><br>
+
+<select name="id_veterinario">
+
+{% for veterinario in veterinarios %}
+
+<option value="{{ veterinario[0] }}">
+    {{ veterinario[1] }}
+</option>
+
+{% endfor %}
+
+</select>
+
+<br><br>
+
+<button type="submit">Guardar</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
+
+<br>
+
+<a href="/">Volver al Inicio</a>
